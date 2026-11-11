@@ -80,9 +80,9 @@ We have provided a detailed step-by-step guide to downloading dependencies, buil
 ### :hammer_and_wrench: Useful Resources
 
 * **Docker:** [you need to learn Docker RIGHT NOW!! // Docker Containers 101](https://www.youtube.com/watch?v=eGz9DS-aIeY)
-* **What is Docker in 5 minutes**[What is Docker in 5 minutes](https://www.youtube.com/watch?v=_dfLOzuIg2o&t=18s)
+* **Docker:** [What is Docker in 5 minutes](https://www.youtube.com/watch?v=_dfLOzuIg2o&t=18s)
 * **gem5:** [Learning gem5 (Official Documentation)](https://www.gem5.org/documentation/gem5art/tutorials/parsec-tutorial)
-* **gem5 programming**[Learning gem5 ASPLOS tutorial](https://www.youtube.com/watch?v=wo4b9FPEiHk&list=PL-J9GXT0E7ALwbi339_AsbGvKbdIw52Vf)
+* **gem5:** [Learning gem5 ASPLOS tutorial](https://www.youtube.com/watch?v=wo4b9FPEiHk&list=PL-J9GXT0E7ALwbi339_AsbGvKbdIw52Vf)
 * **ChampSim:** [ChampSim GitHub Repository](https://github.com/ChampSim/ChampSim)
-* **Introduction to ChampSim Microarchitectural Simulato** [Introduction to ChampSim Microarchitectural Simulato](https://www.youtube.com/watch?v=MuIUo-f31Z0&t=289s)
-* **PARSEC trace files for ChampSim** [PARSEC trace files](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA)
+* **ChampSim:** [Introduction to ChampSim Microarchitectural Simulator](https://www.youtube.com/watch?v=MuIUo-f31Z0&t=289s)
+* **PARSEC:** [PARSEC 2.1 trace files for ChampSim](https://zenodo.org/records/14268119)

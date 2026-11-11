@@ -1,6 +1,6 @@
 # ChampSim + PARSEC Setup Guide
 
-This guide details how to set up [ChampSim](https://github.com/ChampSim/ChampSim.git), download [PARSEC traces](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA), and run simulations.
+This guide details how to set up [ChampSim](https://github.com/ChampSim/ChampSim.git), download [PARSEC traces](https://zenodo.org/records/14268119), and run simulations.
 
 ## System Requirements (Read First)
 
@@ -17,7 +17,7 @@ Open your terminal and execute the following commands to set up the environment 
 ### For Linux / Windows (WSL)
 ```bash
 # Install necessary packages
-sudo apt update && sudo apt install -y build-essential git megatools
+sudo apt update && sudo apt install -y build-essential git curl zip unzip tar pkg-config
 ```
 ### For macOS
 ```bash
@@ -25,7 +25,7 @@ sudo apt update && sudo apt install -y build-essential git megatools
 xcode-select --install
 
 # Install dependencies via Homebrew
-brew install git megatools
+brew install git pkg-config
 ```
 
 --- 
@@ -62,18 +62,19 @@ Choose **one** of the following methods to get the trace files.
 
 ### Option A: Direct Download (Recommended)
 
-Use `megadl` to download the files directly to the server.
+Download the PARSEC 2.1 trace archive (~3.3 GB, released by the SAFARI Research Group on [Zenodo](https://zenodo.org/records/14268119)) and extract the traces into `trace_files/`.
 
 ```bash
-sudo apt install megatools
-megadl --path trace_files/ 'https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA'
+curl -L -o parsec2.1.tar.gz https://zenodo.org/records/14268119/files/parsec2.1.tar.gz
+tar -xzf parsec2.1.tar.gz --strip-components=1 -C trace_files/
+rm parsec2.1.tar.gz
 ```
 
-### Option B: Manual Upload (If you don't have `sudo`)
+### Option B: Manual Upload (If your server cannot download the file directly)
 
 If Option A fails, download the files to your local computer and upload them using `scp`.
 
-1. **Download**: Get the files manually from this **[MEGA Link](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA)**.
+1. **Download**: Get `parsec2.1.tar.gz` manually from **[Zenodo](https://zenodo.org/records/14268119)** and extract it (`tar -xzf parsec2.1.tar.gz`).
 2. **Upload**: Open a terminal on your **local computer** (not the server) and run:
 ```bash
 # Replace 'path/to/downloaded/files' and 'user@host' with your actual details; '~/champsim_workspace/ChampSim/trace_files/' can be changed based on your path setting
