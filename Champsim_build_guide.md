@@ -231,16 +231,19 @@ To change parameters (e.g., Cache size, Branch Predictor), follow this **Loop**:
 
 1. **Edit Configuration**:
 Open `champsim_config.json`. (Note: `champsim_config.json` file is under `ChampSim` folder)
+* **Branch Predictor**: Change `"branch_predictor"` under `"ooo_cpu"` (default: `"bimodal"`; other options: `"gshare"`, `"perceptron"`, `"hashed_perceptron"`).
 * **L2 Cache Size**: Modify `"sets"` under `"L2C"` (e.g., change `1024` to `2048`).
-* **Branch Predictor**: Change `"branch_predictor"` value (e.g., `"bimodal"`, `"gshare"`, `"perceptron"`).
 
+For example, change the branch predictor from `"bimodal"` to `"hashed_perceptron"`:
 
 ```json
-"L2C": {
-    "sets": 2048,
-    "ways": 8,
+"ooo_cpu": [
+  {
     ...
-}
+    "branch_predictor": "hashed_perceptron",
+    ...
+  }
+]
 ```
 
 2. **Recompile (CRITICAL STEP)**:
@@ -252,5 +255,6 @@ make
 
 3. **Run Simulation**:
 Execute the `./bin/champsim --warmup-instructions 1000000 --simulation-instructions 10000000 trace_files/parsec_2.1.blackscholes.simlarge.prebuilt.drop_1750M.length_250M.champsimtrace.xz
-` command again to see the new results. Also, every paramerters (e.g., --warmup-instructions) are adjustable. 
+` command again to see the new results. Also, every paramerters (e.g., --warmup-instructions) are adjustable.
+With `hashed_perceptron`, you should see the branch prediction accuracy go from about `97.28%` to `99.68%` and the IPC from about `1.96` to `2.08`. 
 
