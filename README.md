@@ -1,10 +1,10 @@
-# ECE 757: Advanced Computer Architecture II - Final Project Environment Setup
+# UW Advanced Computer Architecture - Simulation Environment Setup
 
-Welcome to the environment setup guide for the ECE 757 Final Project. This repository provides resources and instructions for setting up the simulation environments required for your project.
+Welcome to the environment setup guide for UW Advanced Computer Architecture courses. This repository provides resources and instructions for setting up the simulation environments required for your project.
 
-## 📌 Project Overview
+## 📌 Overview
 
-For the final project, you have **two recommended options** for your simulation environment. Both environments have been prepared and tested to ensure they work with the PARSEC benchmark suite.
+This repository provides **two recommended options** for your simulation environment. Both environments have been prepared and tested to ensure they work with the PARSEC benchmark suite.
 
 1. **gem5 + PARSEC** (via Docker)
 2. **ChampSim + PARSEC** (Manual Build)
@@ -58,7 +58,7 @@ This section is for students who:
 
 The TA has documented the complete build process, including all dependencies and compilation commands. You can follow the instructions in the file below to replicate the environment manually:
 
-* 📄 **[`Gem5_Docker_Build_Guide.md`](https://github.com/Yi-Huaaa/ECE-757-Advanced-computer-architecture-II_Final-project-environment-setup/blob/main/Gem5_Docker_Build_Guide.md)**
+* 📄 **[`Gem5_Docker_Build_Guide.md`](Gem5_Docker_Build_Guide.md)**
 * *Note: This is for **reference** only. We strongly suggest using the **Docker** image for the gem5 path to avoid environment conflict issues.* :sunglasses:
 
 
@@ -72,7 +72,7 @@ ChampSim is a trace-driven simulator that is significantly easier to build and r
 
 We have provided a detailed step-by-step guide to downloading dependencies, building the simulator, and running traces.
 
-1. **Open the Guide:** Click on **[`Champsim_build_guide.md`](https://github.com/Yi-Huaaa/ECE-757-Advanced-computer-architecture-II_Final-project-environment-setup/blob/main/Champsim_build_guide.md)** in this repository.
+1. **Open the Guide:** Click on **[`Champsim_build_guide.md`](Champsim_build_guide.md)** in this repository.
 2. **Follow Instructions:** The guide includes scripts to automate the build process and links to download the required PARSEC trace files.
 
 ---

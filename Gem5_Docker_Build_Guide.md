@@ -99,7 +99,7 @@ docker run --rm -it --privileged -v $(pwd):/workspace -w /workspace ubuntu:22.04
 
 ### For step 2, you should get output looks like this:
 ```bash
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$ docker run --rm -it --privileged -v $(pwd):/workspace -w /workspace ubuntu:22.04 bash
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$ docker run --rm -it --privileged -v $(pwd):/workspace -w /workspace ubuntu:22.04 bash
 Unable to find image 'ubuntu:22.04' locally
 22.04: Pulling from library/ubuntu
 6f4ebca3e823: Pull complete 
@@ -462,7 +462,7 @@ docker build -t gem5-parsec-lab .
 
 #### Outputs:
 ```
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$ docker build -t gem5-parsec-lab .
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$ docker build -t gem5-parsec-lab .
 [+] Building 477.4s (11/11) FINISHED                                               docker:default
 => [internal] load build definition from Dockerfile                                            0.0s
 => => transferring dockerfile: 1.35kB                                                   0.0s
@@ -486,7 +486,7 @@ docker build -t gem5-parsec-lab .
 => => exporting manifest list sha256:34d92f9b18bd61360f824bc736d10e9fad43e48cfd01f45bfab8be39471f5827                   0.0s
 => => naming to docker.io/library/gem5-parsec-lab:latest                                         0.0s
 => => unpacking to docker.io/library/gem5-parsec-lab:latest                                       48.1s
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$
 ```
 
 
@@ -547,8 +547,8 @@ docker push yihuachung/gem5-parsec-lab:v1.1
 
 #### Outputs:
 ```bash
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$ docker tag gem5-parsec-lab yihuachung/gem5-parsec-lab:v1.1
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$ docker push yihuachung/gem5-parsec-lab:v1.1
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$ docker tag gem5-parsec-lab yihuachung/gem5-parsec-lab:v1.1
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$ docker push yihuachung/gem5-parsec-lab:v1.1
 The push refers to repository [docker.io/yihuachung/gem5-parsec-lab]
 e14f9e897b91: Pushed 
 da0ce5594790: Pushed 
@@ -558,7 +558,7 @@ da0ce5594790: Pushed
 9d7d67b56f83: Pushed 
 09adb88bda8c: Pushed 
 v1.1: digest: sha256:34d92f9b18bd61360f824bc736d10e9fad43e48cfd01f45bfab8be39471f5827 size: 856
-(base) ychung79@twhuang-desktop-03:~/ECE757_gem5_workspace$ 
+(base) ychung79@twhuang-desktop-03:~/gem5_workspace$ 
 ```
 
 

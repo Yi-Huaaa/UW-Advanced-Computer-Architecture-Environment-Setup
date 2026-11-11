@@ -1,6 +1,6 @@
-# ECE757: ChampSim + PARSEC Setup Guide
+# ChampSim + PARSEC Setup Guide
 
-This guide details how to set up [ChampSim](https://github.com/ChampSim/ChampSim.git), download [PARSEC traces](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA), and run simulations for the final project.
+This guide details how to set up [ChampSim](https://github.com/ChampSim/ChampSim.git), download [PARSEC traces](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA), and run simulations.
 
 ## System Requirements (Read First)
 
@@ -37,7 +37,7 @@ Run these commands for all operating systems (linux/windows/macOS):
 
 ```bash
 # Create workspace
-mkdir -p ECE757_champsim_workspace && cd ECE757_champsim_workspace/
+mkdir -p champsim_workspace && cd champsim_workspace/
 
 # Clone ChampSim repository
 git clone https://github.com/ChampSim/ChampSim.git
@@ -76,8 +76,8 @@ If Option A fails, download the files to your local computer and upload them usi
 1. **Download**: Get the files manually from this **[MEGA Link](https://mega.nz/folder/hp1wCRBI#TlHy4GKlEHW-Eyk4AfwBZA)**.
 2. **Upload**: Open a terminal on your **local computer** (not the server) and run:
 ```bash
-# Replace 'path/to/downloaded/files' and 'user@host' with your actual details; '~/ECE757_champsim_workspace/ChampSim/trace_files/' can be changed based on your path setting
-scp path/to/downloaded/parsec_2.1.* user@your_server_ip:~/ECE757_champsim_workspace/ChampSim/trace_files/
+# Replace 'path/to/downloaded/files' and 'user@host' with your actual details; '~/champsim_workspace/ChampSim/trace_files/' can be changed based on your path setting
+scp path/to/downloaded/parsec_2.1.* user@your_server_ip:~/champsim_workspace/ChampSim/trace_files/
 ```
 
 ### After a successful download, you should see six traces files:
@@ -120,7 +120,7 @@ Runs the *Blackscholes_1750M* benchmark with 1M warmup instructions and 10M simu
 **Successful Outcomes of the Example:**
 
 ```bash
-(base) ychung79@twhuang-desktop-03:~/ECE757_champsim_workspace/ChampSim$ ./bin/champsim --warmup-instructions 1000000 --simulation-instructions 10000000 trace_files/parsec_2.1.blackscholes.simlarge.prebuilt.drop_1750M.length_250M.champsimtrace.xz
+(base) ychung79@twhuang-desktop-03:~/champsim_workspace/ChampSim$ ./bin/champsim --warmup-instructions 1000000 --simulation-instructions 10000000 trace_files/parsec_2.1.blackscholes.simlarge.prebuilt.drop_1750M.length_250M.champsimtrace.xz
 [VMEM] WARNING: physical memory size is smaller than virtual memory size.
 
 *** ChampSim Multicore Out-of-Order Simulator ***
@@ -219,12 +219,12 @@ Channel 0 WQ ROW_BUFFER_HIT:          0
   ROW_BUFFER_MISS:          0
   FULL:          0
 Channel 0 REFRESHES ISSUED:        425
-(base) ychung79@twhuang-desktop-03:~/ECE757_champsim_workspace/ChampSim$ 
+(base) ychung79@twhuang-desktop-03:~/champsim_workspace/ChampSim$ 
 ```
 
 ---
 
-## 5. How to Modify Hardware Configuration for Your Final Project (Just an Example Here)
+## 5. Example: Modifying Hardware Configuration
 
 To change parameters (e.g., Cache size, Branch Predictor), follow this **Loop**:
 
