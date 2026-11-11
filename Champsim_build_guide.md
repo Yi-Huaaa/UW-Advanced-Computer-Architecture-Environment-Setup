@@ -81,7 +81,7 @@ If Option A fails, download the files to your local computer and upload them usi
 scp path/to/downloaded/parsec_2.1.* user@your_server_ip:~/champsim_workspace/ChampSim/trace_files/
 ```
 
-### After a successful download, you should see six traces files:
+### After a successful download, `trace_files/` should include these six trace files used in this guide (the archive also contains other PARSEC traces):
 ```bash
 parsec_2.1.blackscholes.simlarge.prebuilt.drop_1750M.length_250M.champsimtrace.xz
 parsec_2.1.blackscholes.simlarge.prebuilt.drop_3000M.length_250M.champsimtrace.xz
